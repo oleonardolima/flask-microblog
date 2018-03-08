@@ -1,0 +1,10 @@
+<!-- Derived (inherit) template from base.html -->
+<!-- {*{ ... }*} are placeholders that are replaced with the variables from th render_template function -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Hi, {{ user.username }}!</h1>
+  {% for post in posts %}
+  <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+  {% endfor %}
+{% endblock %}
